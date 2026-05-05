@@ -1,0 +1,32 @@
+pip install google-generativeai
+
+* Import:
+
+import google.generativeai as genai
+
+Note: PyPI indicates this package is deprecated in favor of the newer unified Google GenAI SDK.
+
+2) python-dotenv
+* Loads environment variables from a .env file into os.environ.
+* Install:
+
+pip install python-dotenv
+
+* Use:
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv("GOOGLE_API_KEY")
+
+Typical usage together
+
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+If you tell me what you’re trying to build (script generator, chatbot, etc.), I can give you the exact minimal working example (and if you want, the newer google-genai version instead of google-generativeai).
